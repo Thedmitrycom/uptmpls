@@ -66,7 +66,7 @@ foreach ($puthAsArray as $key => $onePuth) {
 }
 $puthAsArray = array_values($puthAsArray);
 
-print_r($puthAsArray);
+// print_r($puthAsArray);
 $template = 404;
 $apiStatusCode = 404;
 $needAuth = false;

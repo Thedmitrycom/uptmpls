@@ -1,19 +1,8 @@
 <!DOCTYPE html>
-<!--
-Author: Keenthemes
-Product Name: KeenProduct Version: 3.0.7
-Purchase: https://themes.getbootstrap.com/product/keen-the-ultimate-bootstrap-admin-theme/
-Website: http://www.keenthemes.com
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Dribbble: www.dribbble.com/keenthemes
-Like: www.facebook.com/keenthemes
-License: For each use you must have a valid license purchased only from above link in order to legally use the theme for your project.
--->
-<html lang="en">
+<html lang="ru">
 	<!--begin::Head-->
 	<head>
-<base href="../../../" />
+
 		<title>Keen - Multi-demo Bootstrap 5 HTML Admin Dashboard Template by KeenThemes</title>
 		<meta charset="utf-8" />
 		<meta name="description" content="The most advanced Bootstrap Admin Theme on Bootstrap Market trusted by over 4,000 beginners and professionals. Multi-demo, Dark Mode, RTL support. Grab your copy now and get life-time updates for free." />
@@ -46,32 +35,20 @@ License: For each use you must have a valid license purchased only from above li
 			<!--begin::Authentication - Sign-in -->
 			<div class="d-flex flex-column flex-lg-row flex-column-fluid">
 				<!--begin::Aside-->
-				<div class="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center" style="background-image: url(assets/media/misc/auth-bg.png)">
+				<div class="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center" style="background-image: url(/assets/media/misc/auth-bg.png)">
 					<!--begin::Content-->
 					<div class="d-flex flex-column flex-center p-6 p-lg-10 w-100">
 						<!--begin::Logo-->
 						<a href="index.html" class="mb-0 mb-lg-20">
 							<img alt="Logo" src="/assets/media/logos/default-white.svg" class="h-40px h-lg-50px" />
 						</a>
-						<!--end::Logo-->
-						<!--begin::Image-->
 						<img class="d-none d-lg-block mx-auto w-300px w-lg-75 w-xl-500px mb-10 mb-lg-20" src="/assets/media/misc/auth-screens.png" alt="" />
-						<!--end::Image-->
-						<!--begin::Title-->
-						<h1 class="d-none d-lg-block text-white fs-2qx fw-bold text-center mb-7">Fast, Efficient and Productive</h1>
-						<!--end::Title-->
-						<!--begin::Text-->
-						<div class="d-none d-lg-block text-white fs-base text-center">In this kind of post, 
-						<a href="#" class="opacity-75-hover text-warning fw-semibold me-1">the blogger</a>introduces a person they’ve interviewed 
-						<br />and provides some background information about 
-						<a href="#" class="opacity-75-hover text-warning fw-semibold me-1">the interviewee</a>and their 
-						<br />work following this is a transcript of the interview.</div>
-						<!--end::Text-->
+						<h1 class="d-none d-lg-block text-white fs-2qx fw-bold text-center mb-7">Мониторинг сайта и API</h1>
+						
+						<div class="d-none d-lg-block text-white fs-base text-center">Сервис  <span class="opacity-75-hover text-warning fw-semibold me-1">uptime+</span>позволяет в режиме реального времени следить за своим сайтом, сервисом или API. <br />
+							Бывают разные ситуации, а вдруг сервер упал или деплой неудачный? <br /><br />Мы увидим и оповестим вас об этом в тот же час 😉</div>
 					</div>
-					<!--end::Content-->
 				</div>
-				<!--begin::Aside-->
-				<!--begin::Body-->
 				<div class="d-flex flex-column flex-lg-row-fluid w-lg-50 p-10">
 					<!--begin::Form-->
 					<div class="d-flex flex-center flex-column flex-lg-row-fluid">
@@ -82,39 +59,14 @@ License: For each use you must have a valid license purchased only from above li
 								<!--begin::Heading-->
 								<div class="text-center mb-11">
 									<!--begin::Title-->
-									<h1 class="text-gray-900 fw-bolder mb-3">Sign In</h1>
+									<h1 class="text-gray-900 fw-bolder mb-3">Вход</h1>
 									<!--end::Title-->
 									<!--begin::Subtitle-->
-									<div class="text-gray-500 fw-semibold fs-6">Your Social Campaigns</div>
+									<div class="text-gray-500 fw-semibold fs-6">в свой профиль</div>
 									<!--end::Subtitle=-->
 								</div>
-								<!--begin::Heading-->
-								<!--begin::Login options-->
-								<div class="row g-3 mb-9">
-									<!--begin::Col-->
-									<div class="col-md-6">
-										<!--begin::Google link=-->
-										<a href="#" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
-										<img alt="Logo" src="/assets/media/svg/brand-logos/google-icon.svg" class="h-15px me-3" />Sign in with Google</a>
-										<!--end::Google link=-->
-									</div>
-									<!--end::Col-->
-									<!--begin::Col-->
-									<div class="col-md-6">
-										<!--begin::Google link=-->
-										<a href="#" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
-										<img alt="Logo" src="/assets/media/svg/brand-logos/apple-black.svg" class="theme-light-show h-15px me-3" />
-										<img alt="Logo" src="/assets/media/svg/brand-logos/apple-black-dark.svg" class="theme-dark-show h-15px me-3" />Sign in with Apple</a>
-										<!--end::Google link=-->
-									</div>
-									<!--end::Col-->
-								</div>
-								<!--end::Login options-->
-								<!--begin::Separator-->
-								<div class="separator separator-content my-14">
-									<span class="w-125px text-gray-500 fw-semibold fs-7">Or with email</span>
-								</div>
-								<!--end::Separator-->
+								
+								
 								<!--begin::Input group=-->
 								<div class="fv-row mb-8">
 									<!--begin::Email-->
@@ -140,7 +92,7 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="d-grid mb-10">
 									<button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
 										<!--begin::Indicator label-->
-										<span class="indicator-label">Sign In</span>
+										<span class="indicator-label">Войти</span>
 										<!--end::Indicator label-->
 										<!--begin::Indicator progress-->
 										<span class="indicator-progress">Please wait... 
@@ -150,8 +102,8 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
 								<!--end::Submit button-->
 								<!--begin::Sign up-->
-								<div class="text-gray-500 text-center fw-semibold fs-6">Not a Member yet? 
-								<a href="authentication/layouts/corporate/sign-up.html" class="link-primary">Sign up</a></div>
+								<div class="text-gray-500 text-center fw-semibold fs-6">Еще не с нами? 
+								<a href="/sugnup" class="link-primary">Хочу зарегистрироваться</a></div>
 								<!--end::Sign up-->
 							</form>
 							<!--end::Form-->
