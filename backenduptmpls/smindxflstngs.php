@@ -42,10 +42,6 @@ require_once $backendFolder.'conf098uhjgbn12rfwsd.php';
 
 require_once $backendFolder.'libs/functions.php';
 
-$current_language = 'en';
-if($currentDomain == 'ru.publc.uptime.plus') {
-	$current_language = 'ru';
-}
 
 
 $puthAsArray = explode('/', $puth);
@@ -62,13 +58,13 @@ foreach ($puthAsArray as $key => $onePuth) {
 }
 $puthAsArray = array_values($puthAsArray);
 
-// print_r($puthAsArray);
+print_r($puthAsArray);
 $template = 404;
 $apiStatusCode = 404;
 $needAuth = false;
 
 include_once $backendFolder.'libs/mysql.php';
-$db = new myuptimeDB($wl_db_host, $wl_db_user, $wl_db_pass);
+$db = new uptimePlus($wl_db_host, $wl_db_user, $wl_db_pass);
 
 $typeOfRequest = 'site';
 if(!empty($puthAsArray[1]) && $puthAsArray[1] == 'api') {
@@ -76,11 +72,9 @@ if(!empty($puthAsArray[1]) && $puthAsArray[1] == 'api') {
 	$typeOfRequest = 'api';
 	$apiAnswer = array('status' => 404, 'response_status' => 'error', 'response' => array('reason' => 'not found'));
 	$backendFolderTemplates = $backendFolderTemplatesAPI;
-} else if(!empty($puthAsArray[1]) && $puthAsArray[1] == 'app') {
+} else {
 	$needAuth = true;
 	$typeOfRequest = 'app';
-} else {
-	$typeOfRequest = 'site';
 }
 
 $choicedTemplate = 'header_body_prefooter_footer';
@@ -131,14 +125,7 @@ if($needAuth) {
 
 }
 
-if($typeOfRequest == 'site' || $typeOfRequest == 'app') {
-
-	$translationFile = $backendFolderi18n.'app/global_'.$current_language; 
-	$i18nGlobal = new I18nGlobal($current_language, $translationFile);
-
-	$translationFile = $backendFolderi18n.'app/'.$template.'_'.$current_language; 
-	$i18n = new I18n($current_language, $translationFile);
-
+if($typeOfRequest == 'app') {
 	foreach ($htmlCodeStructure[$choicedTemplate] as $key => $oneTmpl) {
 		$oneTmpl = str_replace('{body}', $template, $oneTmpl);
 		require_once $backendFolderTemplates.$oneTmpl.'.php';
