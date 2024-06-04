@@ -96,6 +96,7 @@ if($typeOfRequest == 'app') {
 	$htmlCodeStructure['header_body_footer'] = array('static/header', '{body}', 'static/footer'); 
 	$htmlCodeStructure['header_menu_body_prefooter_footer'] = array('static/header', 'static/menu', '{body}', 'static/prefooter',  'static/footer');
 	$htmlCodeStructure['header_body_prefooter_footer'] = array('static/header', '{body}', 'static/prefooter',  'static/footer');
+	$htmlCodeStructure['body'] = array('{body}');
 
 }
 
@@ -122,6 +123,7 @@ if($needAuth) {
 
 	if($isUser) {} else {
 		$template = 'system/403';
+		$choicedTemplate = 'body';
 	}
 
 }
