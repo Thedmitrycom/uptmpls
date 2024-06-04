@@ -79,7 +79,7 @@ if(!empty($puthAsArray[1]) && $puthAsArray[1] == 'api') {
 	header('Content-Type: application/json; charset=utf-8');
 	$typeOfRequest = 'api';
 	$apiAnswer = array('status' => 404, 'response_status' => 'error', 'response' => array('reason' => 'not found'));
-	$backendFolderTemplates = $backendFolderTemplatesAPI;
+	// $backendFolderTemplates = $backendFolderTemplatesAPI;
 } else {
 	$needAuth = true;
 	$typeOfRequest = 'app';
@@ -106,7 +106,7 @@ if($typeOfRequest == 'site') {
 
 }
 
-require_once $backendFolderTemplates.'/'.$typeOfRequest.'/routing.php';
+require_once $backendFolder.'/'.$typeOfRequest.'/routing.php';
 
 if(empty($_COOKIE['mptm']) || empty($_COOKIE['mptm2'])) {
 	$mptm = false;
@@ -136,10 +136,10 @@ if($needAuth) {
 if($typeOfRequest == 'app') {
 	foreach ($htmlCodeStructure[$choicedTemplate] as $key => $oneTmpl) {
 		$oneTmpl = str_replace('{body}', $template, $oneTmpl);
-		require_once $backendFolderTemplates.$oneTmpl.'.php';
+		require_once $backendFolder.$oneTmpl.'.php';
 	}
 } else {
-	require_once $backendFolderTemplates.$template.'.php';
+	require_once $backendFolder.$template.'.php';
 }
 
 
