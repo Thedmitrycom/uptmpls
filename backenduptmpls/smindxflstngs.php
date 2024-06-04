@@ -74,7 +74,7 @@ $needAuth = false;
 include_once $backendFolder.'libs/mysql.php';
 $db = new uptimePlus($wl_db_host, $wl_db_user, $wl_db_pass);
 
-$typeOfRequest = 'site';
+$typeOfRequest = 'app';
 if(!empty($puthAsArray[1]) && $puthAsArray[1] == 'api') {
 	header('Content-Type: application/json; charset=utf-8');
 	$typeOfRequest = 'api';
@@ -86,14 +86,7 @@ if(!empty($puthAsArray[1]) && $puthAsArray[1] == 'api') {
 }
 
 $choicedTemplate = 'header_body_prefooter_footer';
-if($typeOfRequest == 'site') {
-
-	$htmlCodeStructure = array();
-	$htmlCodeStructure['header_body_footer'] = array('static/header', '{body}', 'static/footer'); 
-	$htmlCodeStructure['header_menu_body_prefooter_footer'] = array('static/header', 'static/menu', '{body}', 'static/prefooter',  'static/footer');
-	$htmlCodeStructure['header_body_prefooter_footer'] = array('static/header', '{body}', 'static/prefooter',  'static/footer');
-
-} else if($typeOfRequest == 'app') {
+if($typeOfRequest == 'app') {
 
 	$puth = str_replace('/app', '/', $puth);
 	$puth = str_replace('/app/', '', $puth);
