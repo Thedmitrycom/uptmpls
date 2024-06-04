@@ -93,9 +93,9 @@ if($typeOfRequest == 'app') {
 	$puth = str_replace('//', '', $puth);
 
 	$htmlCodeStructure = array();
-	$htmlCodeStructure['header_body_footer'] = array('app/static/header', '{body}', 'app/static/footer'); 
-	$htmlCodeStructure['header_menu_body_prefooter_footer'] = array('app/static/header', 'app/static/menu', '{body}', 'app/static/prefooter',  'app/static/footer');
-	$htmlCodeStructure['header_body_prefooter_footer'] = array('app/static/header', '{body}', 'app/static/prefooter',  'app/static/footer');
+	$htmlCodeStructure['header_body_footer'] = array('static/header', '{body}', 'static/footer'); 
+	$htmlCodeStructure['header_menu_body_prefooter_footer'] = array('static/header', 'static/menu', '{body}', 'static/prefooter',  'static/footer');
+	$htmlCodeStructure['header_body_prefooter_footer'] = array('static/header', '{body}', 'static/prefooter',  'static/footer');
 
 }
 
@@ -129,10 +129,10 @@ if($needAuth) {
 if($typeOfRequest == 'app') {
 	foreach ($htmlCodeStructure[$choicedTemplate] as $key => $oneTmpl) {
 		$oneTmpl = str_replace('{body}', $template, $oneTmpl);
-		require_once $backendFolder.$oneTmpl.'.php';
+		require_once $backendFolder.$typeOfRequest.'/'.$oneTmpl.'.php';
 	}
 } else {
-	require_once $backendFolder.$template.'.php';
+	require_once $backendFolder.$typeOfRequest.'/'.$template.'.php';
 }
 
 
