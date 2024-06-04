@@ -4,6 +4,11 @@ ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 
 $currenServerTime = date('H:i j/m/Y');
+
+if(empty($_SERVER['HTTP_HOST'])) {
+	die('error_9');
+}
+
 $currentDomain = strip_tags(htmlspecialchars(addslashes($_SERVER['HTTP_HOST'])));
 $currentDomainAsArray = array();
 
@@ -34,7 +39,10 @@ if(empty($_SERVER['REQUEST_URI'])) {
 	}
 }
 
-$publicFolder =  strip_tags(htmlspecialchars(addslashes($_SERVER['DOCUMENT_ROOT']))).'/backenduptmpls/';
+if(empty($_SERVER['DOCUMENT_ROOT'])) {
+	die('error_38');
+}
+$backendFolder =  strip_tags(htmlspecialchars(addslashes($_SERVER['DOCUMENT_ROOT']))).'/backenduptmpls/';
 
 
 
