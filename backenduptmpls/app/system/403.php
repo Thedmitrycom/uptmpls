@@ -41,10 +41,10 @@
 						<a href="index.html" class="mb-0 mb-lg-20">
 							<img alt="Logo" src="/assets/media/logos/default-white.svg" class="h-40px h-lg-50px" />
 						</a>
-						<img class="d-none d-lg-block mx-auto w-300px w-lg-75 w-xl-500px mb-10 mb-lg-20" src="/assets/media/misc/auth-screens.png" alt="" />
+						<img class="d-none d-lg-block mx-auto w-300px w-lg-75 w-xl-300px mb-10 mb-lg-20" src="/assets/media/misc/auth-screens.png" alt="" />
 						<h1 class="d-none d-lg-block text-white fs-2qx fw-bold text-center mb-7">Мониторинг сайта и API</h1>
 						
-						<div class="d-none d-lg-block text-white fs-base text-center">Сервис  <span class="opacity-75-hover text-warning fw-semibold me-1">uptime+</span>позволяет в режиме реального времени следить за своим сайтом, сервисом или API. <br />
+						<div class="d-none d-lg-block text-white fs-lg text-center">Сервис  <span class="opacity-75-hover text-warning fw-semibold me-1">uptime+</span>позволяет в режиме реального времени следить за своим сайтом, сервисом или API. <br />
 							Бывают разные ситуации, а вдруг сервер упал или деплой неудачный? <br /><br />Мы увидим и оповестим вас об этом в тот же час 😉</div>
 					</div>
 				</div>
